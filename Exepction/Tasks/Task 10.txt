@@ -1,0 +1,31 @@
+import java.io.IOException;
+
+public class Main {
+
+    static void readFile() throws IOException {
+
+        int num = 1;
+
+        if (num == 1) {
+            throw new IOException("Error while reading the file.");
+        }
+
+        System.out.println("File read successfully.");
+    }
+
+    public static void main(String[] args) {
+
+        try {
+            readFile();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
+// What I Understood:
+
+// throws بتستخدم علشان نعرف الmethod و لو الميثود مهندليتش نفسها هيبقي ده exception 
+
+
+}

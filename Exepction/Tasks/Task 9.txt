@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static int calculate(int number) {
+        return 100 / number;
+    }
+
+    static void processNumber(int number) {
+        int result = calculate(number);
+
+        System.out.println("Result: " + result);
+    }
+
+    public static void main(String[] args) {
+
+        try {
+            processNumber(0);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero.");
+        }
+    }
+}

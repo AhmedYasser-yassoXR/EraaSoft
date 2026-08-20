@@ -1,0 +1,27 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            try {
+                int number = 10;
+                int result = number / 0;
+
+                System.out.println("Result: " + result);
+
+            } catch (NullPointerException e) {
+                System.out.println("Inner catch: Null value.");
+            }
+
+        } catch (ArithmeticException e) {
+            System.out.println("Outer catch: Cannot divide by zero.");
+        }
+    }
+
+
+// What I Understood:
+
+// nested try-catch enna bn7ot try-catch gwa ba3d wa wa7da mnhom btesht8l
+
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        String text = null;
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        try {
+            System.out.println("Uppercase: " + text.toUpperCase());
+
+            int result = 100 / number;
+            System.out.println("Result: " + result);
+
+        } catch (NullPointerException e) {
+            System.out.println("The String is null.");
+
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero.");
+        }
+    }
+}

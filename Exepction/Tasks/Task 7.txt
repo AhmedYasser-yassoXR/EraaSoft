@@ -1,0 +1,33 @@
+class InvalidScoreException extends Exception {
+
+    public InvalidScoreException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+
+    public static void checkScore(int score) throws InvalidScoreException {
+
+        if (score < 50) {
+            throw new InvalidScoreException("Score is too low.");
+        }
+
+        System.out.println("Score is accepted.");
+    }
+
+    public static void main(String[] args) {
+
+        try {
+            checkScore(30);
+        } catch (InvalidScoreException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+// What I Understood:
+
+// 3mlt class 3l4an el exception ely ana 3mlo dh custom y3ny mesh mwgod mn exceptions wa 3mlt extend mn el parent ely hwa "Exception"
+
+
+}

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        String number = input.nextLine();
+
+        try {
+            int result = Integer.parseInt(number);
+            System.out.println("Number: " + result);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number.");
+        }
+    }
+
+
+
+//What I Understood:
+
+//I understood that Integer.parseInt() is used to convert a String into an integer. If the String does not contain a valid number, a NumberFormatException happens, so I can use try-catch to handle it.
+
+
+}

@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        try {
+            int result = 100 / number;
+            System.out.println("Result: " + result);
+
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero.");
+
+        } finally {
+            System.out.println("Finally block always executes.");
+        }
+    }
+
+
+// what i understand:
+
+// kda hna el "finally" runs ba3d el "try" and "catch" 7atta lw el exception 7asl wla l2 
+
+
+}
